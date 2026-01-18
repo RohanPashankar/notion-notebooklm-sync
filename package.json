@@ -1,0 +1,33 @@
+{
+  "name": "notion-notebooklm-sync",
+  "version": "1.0.0",
+  "description": "Sync Notion database entries to NotebookLM-friendly format",
+  "main": "sync.js",
+  "bin": {
+    "notion-sync": "./sync.js"
+  },
+  "scripts": {
+    "start": "node sync.js",
+    "build": "pkg . --out-path dist",
+    "build:win": "pkg . --targets node18-win-x64 --out-path dist",
+    "build:mac": "pkg . --targets node18-macos-x64 --out-path dist",
+    "build:linux": "pkg . --targets node18-linux-x64 --out-path dist",
+    "build:all": "pkg . --targets node18-win-x64,node18-macos-x64,node18-linux-x64 --out-path dist"
+  },
+  "pkg": {
+    "assets": [],
+    "targets": ["node18-win-x64"],
+    "outputPath": "dist"
+  },
+  "keywords": ["notion", "notebooklm", "sync"],
+  "license": "MIT",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "conf": "^10.2.0",
+    "dotenv": "^16.4.5",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
