@@ -12,6 +12,7 @@ Thumbs.db
 output/
 *.md
 !README.md
+!TECHNICAL_DOCUMENTATION.md
 
 # Build output
 dist/
